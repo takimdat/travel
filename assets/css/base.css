@@ -1,0 +1,22 @@
+:root {
+  --main-color: #ba71da;
+}
+.grid {
+  width: 1170px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-bottom: 60px;
+}
+
+.grid-colum-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 33.33333%;
+}
