@@ -492,6 +492,36 @@
   display: inline-block;
   letter-spacing: 2px;
   text-transform: capitalize;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+}
+
+.booking__book-now-introduce-link::after {
+  background-color: rgb(20, 185, 213);
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.4s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.booking__book-now-introduce-link:hover::after {
+  transform: translate(0, 0);
+}
+
+.booking__book-now-introduce-link:hover {
+  transform: scale(1.05);
 }
 
 .booking__book-now-view {
@@ -607,7 +637,7 @@
 footer {
   text-align: center;
   padding: 40px 0 24px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(20, 185, 213, 0.2);
 }
 footer .media i {
   width: 58px;
